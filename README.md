@@ -5,7 +5,7 @@ A magical pipe chain
 Pipe streams together with a more awesome syntax, like `a | b | c`
 
 # MOTIVATION
-A hangover
+Fun
 
 # EXAMPLES
 `pipechain` does not require `through`, i just like using through.
