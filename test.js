@@ -44,6 +44,8 @@ var d = through(function(d) {
   this.queue(d)
 })
 
-a | b | c | pipe(process.stdout)
+a + b + c + process.stdout
 
 a.write('a-s-d-f')
+
+

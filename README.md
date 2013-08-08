@@ -7,6 +7,9 @@ Pipe streams together with a more awesome syntax, like `a | b | c`
 # MOTIVATION
 A hangover
 
+# EXAMPLES
+`pipechain` does not require `through`, i just like using through.
+
 ```js
 var through = require('through')
 var pipe = require('pipechain').install()
