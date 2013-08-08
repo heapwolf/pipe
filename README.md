@@ -9,6 +9,29 @@ A hangover
 
 ```js
 var through = require('through')
+var pipe = require('pipechain').install()
+
+var a = through(function(d) {
+  this.queue(d.toString().toUpperCase())
+})
+
+var b = through(function(d) {
+  this.queue(d.split('-').join(','))
+})
+
+var c = through(function(d) {
+  this.queue(d.split(',').reverse().toString())
+})
+
+a | b | c
+
+a.write('a-s-d-f') // OMG WTF? => F,D,S,A
+```
+
+# LESS MAGICAL
+
+```js
+var through = require('through')
 var pipe = require('pipechain')
 
 var a = pipe(through(function(d) {
@@ -26,5 +49,5 @@ var c = pipe(through(function(d) {
 
 a | b | c
 
-a.write('a-s-d-f') // OMG WTF? => F,D,S,A
+a.write('a-s-d-f') // OMG GTFO? => F,D,S,A
 ```

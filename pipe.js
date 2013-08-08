@@ -4,11 +4,14 @@ var pipe = module.exports = function pipe(s) {
 
   s.valueOf = function() {
     if (pipe.left) {
-      pipe.left.pipe(s)
-      pipe.left = null
+      pipe.left.pipe(this)
     }
-    pipe.left = s
+    pipe.left = this
     return v.apply(s, arguments)
   }
   return s
+}
+
+pipe.install = function() {
+  pipe(require('stream').prototype)
 }
