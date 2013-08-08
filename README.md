@@ -2,14 +2,14 @@
 A magical pipe chain
 
 # DESCRIPTION
-Pipe streams together with a more awesome syntax, like `a | b | c | pipe(process.stdout)`
+Pipe streams together with a more awesome syntax, like `a | b | c`
 
 # MOTIVATION
 A hangover
 
 ```js
 var through = require('through')
-var pipe = require('pipechain')()
+var pipe = require('pipechain')
 
 var a = pipe(through(function(d) {
   this.queue(d.toString().toUpperCase())
@@ -24,7 +24,7 @@ var c = pipe(through(function(d) {
 }))
 
 
-a | b | c | pipe(process.stdout)
+a | b | c
 
 a.write('a-s-d-f') // OMG WTF? => F,D,S,A
 ```

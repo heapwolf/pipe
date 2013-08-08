@@ -1,18 +1,14 @@
-var pipe = module.exports = function pipe(chain) {
+var pipe = module.exports = function pipe(s) {
 
-  chain = chain || []
+  var v = s.valueOf
 
-  return function(s) {
-
-    var v = s.valueOf
-
-    s.valueOf = function() {
-      if (chain.length) {
-        chain[chain.length-1].pipe(s)
-      }
-      chain.push(s)
-      return v.apply(s, arguments)
+  s.valueOf = function() {
+    if (pipe.left) {
+      pipe.left.pipe(s)
+      pipe.left = null
     }
-    return s
+    pipe.left = s
+    return v.apply(s, arguments)
   }
+  return s
 }

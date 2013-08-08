@@ -1,5 +1,5 @@
 var through = require('through')
-var pipe = require('./pipe')()
+var pipe = require('./pipe')
 var assert = require('assert')
 
 var a = pipe(through(function(d) {
