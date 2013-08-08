@@ -12,7 +12,7 @@ A hangover
 
 ```js
 var through = require('through')
-var pipe = require('pipechain').install()
+require('pipechain').install()
 
 var a = through(function(d) {
   this.queue(d.toString().toUpperCase())
