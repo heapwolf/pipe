@@ -26,7 +26,7 @@ var c = through(function(d) {
   this.queue(d.split(',').reverse().toString())
 })
 
-a | b | c
+a | b | c | process.stdout
 
 a.write('a-s-d-f') // OMG WTF? => F,D,S,A
 ```
@@ -50,7 +50,7 @@ var c = pipe(through(function(d) {
 }))
 
 
-a | b | c
+a | b | c | pipe(process.stdout)
 
 a.write('a-s-d-f') // OMG GTFO? => F,D,S,A
 ```
