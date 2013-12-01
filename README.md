@@ -1,18 +1,15 @@
 # SYNOPSIS
-Magical pipes
+Provides pipes by operator instead of a chain.
 
 # DESCRIPTION
-Pipe streams together with a more awesome syntax, like `a | b | c`
-
-# MOTIVATION
-Fun
+Pipe streams together with a simpler syntax, like `a | b | c`
 
 # EXAMPLES
-`pipechain` does not require `through`, i just like using through.
+`pipe` does not require `through`, i just like using through.
 
 ```js
 var through = require('through')
-require('pipechain').install()
+require('pipe').install()
 
 var a = through(function(d) {
   this.queue(d.toString().toUpperCase())
