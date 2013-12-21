@@ -1,3 +1,5 @@
+[![build-status](https://www.codeship.io/projects/45c20710-4c8c-0131-15d5-5a8cd3f550f8/status)](https://www.codeship.io/projects/11261)
+
 # SYNOPSIS
 Magical pipes
 

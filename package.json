@@ -1,5 +1,5 @@
 {
-  "name": "pipechain",
+  "name": "pipe",
   "version": "1.0.0",
   "description": "Pipe streams together with a more awesome syntax, like `a | b | c | pipe(process.stdout)`",
   "main": "pipe.js",
