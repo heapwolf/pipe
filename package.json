@@ -1,6 +1,6 @@
 {
   "name": "pipe",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Pipe streams together with a more awesome syntax, like `a | b | c | pipe(process.stdout)`",
   "main": "pipe.js",
   "scripts": {
