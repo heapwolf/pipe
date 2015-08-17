@@ -12,6 +12,6 @@ var pipe = module.exports = function pipe(s) {
   return s
 }
 
-pipe.install = function() {
-  pipe(require('stream').prototype)
+pipe.install = function(proto) {
+  pipe(proto || require('stream').prototype)
 }
