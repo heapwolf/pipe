@@ -29,3 +29,14 @@ a | b | c | process.stdout
 
 a.write('a-s-d-f') // OMG WTF? => F,D,S,A
 ```
+
+It is also possible to to install pipe directly by
+requiring the `register` module which can be handy with ES6:
+
+```js
+import 'pipe/register'
+
+// Instead of:
+import pipe from 'pipe'
+pipe.install()
+```
